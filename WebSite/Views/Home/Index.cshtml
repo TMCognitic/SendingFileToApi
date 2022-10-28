@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@if(ViewBag.Message is not null)
+{
+    <p>@ViewBag.Message</p>
+}
+
+<form enctype="multipart/form-data" method="post">
+    <dl>
+        <dt>
+            <label for="File">File</label>
+        </dt>
+        <dd>
+            <input name="File" type="file">
+        </dd>
+    </dl>
+    <input class="btn" type="submit" value="Upload" />
+</form>
